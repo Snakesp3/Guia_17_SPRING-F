@@ -6,26 +6,31 @@
 package com.alumnos.alumnos2023.Entidades;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Escuelas {
 
     @Id
-    private String idEscuelas;
-
+    //Auto generamos id
+    @GeneratedValue(generator = "uuid")
+    //Nos aseguramos que las id no se repitan
+    @GenericGenerator(name = "uuid",strategy = "uuid2")
+    private String id;
     private String nombre;
     private String direccion;
 
     public Escuelas() {
     }
 
-    public String getIdEscuelas() {
-        return idEscuelas;
+    public String getId() {
+        return id;
     }
 
-    public void setIdEscuelas(String idEscuelas) {
-        this.idEscuelas = idEscuelas;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -43,5 +48,8 @@ public class Escuelas {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
+    
+    
 
 }
