@@ -21,7 +21,7 @@ public class MateriasServicio {
     //tratados con una "transactional"
     @Transactional
     public void crearMaterias(String asignatura) {
-        //Creamos
+        //Creamos un objeto
         Materias materias = new Materias();
 
         //Setteamos
