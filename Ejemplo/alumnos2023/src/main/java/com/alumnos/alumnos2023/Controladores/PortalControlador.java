@@ -12,7 +12,8 @@ public class PortalControlador {
     //Mapeara el acceso a la url
     @GetMapping("/")
     public String index() {
-
+        
+        //Luego devolvemos la vista que queremos ver
         return "index.html";
     }
 }

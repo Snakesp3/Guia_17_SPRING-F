@@ -65,7 +65,7 @@ public class AlumnosServicio {
         //Primero que nada creamos un objeto
         Alumnos alumnos = new Alumnos();
 
-        // Luego de tener todos los atributos completo podemos guardar todo lo que cargue y lo persista luego a la base
+        //Luego de tener todos los atributos completo podemos guardar todo lo que cargue y lo persista luego a la base
         //de datos
         //Setteamos
         alumnos.setIdAlumnos(idAlumnos);
@@ -163,5 +163,5 @@ public class AlumnosServicio {
         
     }
     
-//Terminamos primer video de datos "Mi Excepcion"
+
 }
