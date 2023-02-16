@@ -7,6 +7,8 @@ package com.alumnos.alumnos2023.Entidades;
 
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -17,7 +19,8 @@ import org.hibernate.annotations.ManyToAny;
 public class Alumnos {
 
     @Id
-    private Integer idAlumnos;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idAlumnos;
     private String nombre;
     private Integer dni;
 
